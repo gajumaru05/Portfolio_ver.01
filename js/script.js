@@ -21,7 +21,7 @@ $(function () {
         //全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
         if (window.matchMedia("(min-width: 768px)").matches) {
             /* ウィンドウサイズ768以上の処理 */
-            const headerHight = 100; //ヘッダーの高さを指定(ヘッダー追従のため)
+            const headerHight = 110; //ヘッダーの高さを指定(ヘッダー追従のため)
             const elmHash = $(this).attr("href"); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
             const pos = $(elmHash).offset().top - headerHight; //idの上部の距離(ヘッダーの高さを差し引き)を取得
             $("body,html").animate({
