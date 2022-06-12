@@ -724,7 +724,7 @@ main {
 .recipe_item_btn {
     display: block;
     color: #fff;
-    background-color: #948068;
+    background-color: #ad9578;
     width: 200px;
     border-radius: 36px;
     padding: 5px 0;
@@ -878,7 +878,7 @@ main {
     transition: .3s;
     cursor: pointer;
     color: #fff;
-    background-color: #948068;
+    background-color: #ad9578;
     box-shadow: 2px 2px 2px #35473970;
 }
 
