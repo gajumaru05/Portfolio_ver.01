@@ -113,8 +113,8 @@ input[type="checkbox"] {
     position: fixed;
     top: 20px;
     right: 0;
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     border-radius: 8px 0 0 8px;
     display: flex;
     justify-content: center;
@@ -188,7 +188,7 @@ input[type="checkbox"] {
 }
 
 .contact_btn {
-    border-radius: 24px;
+    border-radius: 8px;
 }
 
 #menu_box:checked~.header_menu {
@@ -228,13 +228,11 @@ input[type="checkbox"] {
 }
 
 /* -------------------- main -------------------- */
-
 main {
     background: none;
 }
 
 /* ----- トップページ ----- */
-
 .top .top_pc {
     display: none;
 }
@@ -242,19 +240,18 @@ main {
 .top .top_sp {
     display: block;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     margin: 40px 0;
 }
 
 /* ----- サブタイトル ----- */
-
 .sub_title {
     display: block;
     margin: 0 auto 24px auto;
     padding: 8px 0 4px 0;
     line-height: 1.5;
     max-width: 400px;
-    border-bottom: 2px dashed #715B475d;
+    border-bottom: 1px solid #715B475d;
     text-align: center;
 }
 
@@ -306,9 +303,9 @@ main {
 
 .news_list {
     /* max-width: 640px; */
-    padding: 24px;
+    padding: 12px 24px;
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FCF4E8;
 }
 
@@ -318,12 +315,13 @@ main {
 }
 
 .news_list .item a {
-    padding: 8px 16px;
-    line-height: 1.5;
     display: flex;
     flex-wrap: wrap;
-    color: #706D67;
+    padding: 8px 16px;
+    line-height: 1.5;
+    border-radius: 4px;
     transition: .3s;
+    color: #706D67;
 }
 
 .news_list .item .day {
@@ -415,14 +413,14 @@ main {
     padding: 28px 24px;
     max-width: 560px;
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FCF4E8;
 }
 
 .about_text h2 {
-    font-size: 1.375rem;
-    /* 22px */
-    margin-bottom: 12px;
+    font-size: 1.25rem;
+    /* 20px */
+    margin-bottom: 8px;
 }
 
 .about_item .about_text p {
@@ -444,9 +442,9 @@ main {
 
 .item_reverse .about_text .about_title {
     display: block;
-    padding: 6px 16px;
+    padding: 4px 16px;
     margin: 0 0 6px 0;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: #715B47;
 }
 
@@ -455,24 +453,22 @@ main {
     margin: 0;
     padding: 0 0 0 16px;
     color: #fff;
-    border-left: 2px solid #FCF4E8;
+    border-left: 1.5px solid #fcf4e8ac;
 }
 
 .number {
     display: inline-block;
-    line-height: 1.35;
     font-size: 1rem;
     /* 18px */
-    padding: 3px 8px 3px 0;
+    vertical-align: 1px;
+    padding: 0 8px 0 0;
     letter-spacing: 1px;
     color: #fff;
 }
 
 .item_reverse .about_text p {
-    line-height: 1.3;
-    margin: 0 16px;
+    line-height: 1.4;
 }
-
 
 /* ----- レビュー ----- */
 
@@ -484,7 +480,7 @@ main {
 .slider_item {
     margin: 0 8px;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FCF4E8;
 }
 
@@ -615,69 +611,22 @@ main {
 }
 
 /* 矢印の設定 */
-.slick-prev,
-.slick-next {
-    width: 40px;
-    height: inherit;
-    padding: 0;
+.prev_icon {
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translate(0, -50%);
+    width: 30px;
+    z-index: 1;
 }
 
-.slick-prev {
-    left: -9%;
-    z-index: 3;
-}
-
-.slick-next {
-    right: -9%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    display: block;
-    width: inherit;
-    padding: 0 0 10px 0;
-    border-radius: 50%;
-    /* background-color: #354739; */
-    color: #354739;
-    font-weight: bold;
-    font-size: 2rem;
-    /* 矢印の大きさ 32px */
-}
-
-.slick-prev:before {
-    content: "<";
-}
-
-.slick-next:before {
-    content: ">";
-}
-
-/* ドットの設定 ▶︎ 非表示中 */
-.slick-dots {
-    bottom: initial;
-    /* 初期状態で-25px(bottom)が指定されている為、初期化 */
-    margin-top: 24px;
-    text-align: center;
-}
-
-.slick-dots li {
-    width: 24px;
-    /* ドット同士の間隔を開ける */
-    text-align: center;
-}
-
-.slick-dots li button:before {
-    font-size: 0.75rem;
-    /* ドットの大きさ 12px */
-    color: #847566;
-    width: 24px;
-    /* 判定の幅を大きく */
-    opacity: 0.7;
-}
-
-.slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: #866C53;
+.next_icon {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translate(0, -50%);
+    width: 30px;
+    z-index: 1;
 }
 
 /* ----- レシピ ----- */
@@ -691,8 +640,7 @@ main {
     padding: 24px;
     margin: 0 auto;
     position: relative;
-    /* box-shadow: 3px 3px 3px #35473920; */
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FCF4E8;
 }
 
@@ -704,7 +652,7 @@ main {
     display: block;
     width: 100%;
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .recipe ul li h3 {
@@ -723,10 +671,11 @@ main {
 
 .recipe_item_btn {
     display: block;
-    color: #fff;
-    background-color: #ad9578;
+    color: #354739;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #35473930;
     width: 200px;
-    border-radius: 36px;
+    border-radius: 24px;
     padding: 5px 0;
     margin: 0 0 0 auto;
     text-align: center;
@@ -768,7 +717,7 @@ main {
     padding: 24px 24px 19px 24px;
     position: absolute;
     transform: translate(-50%, -50%);
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .modal_content a {
@@ -778,7 +727,7 @@ main {
     line-height: 1.3;
     margin: 12px auto 0 auto;
     padding: 2px 0 3px 0;
-    border-radius: 36px;
+    border-radius: 24px;
     background-color: #425E50;
     color: #fff;
     text-align: center;
@@ -792,7 +741,7 @@ main {
 .question_list {
     padding: 32px 24px;
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FCF4E8;
 }
 
@@ -817,12 +766,12 @@ main {
 
 .buy_wrap {
     padding: 32px 24px;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FCF4E8;
 }
 
 .buy_title {
-    margin: 0 auto 24px auto;
+    margin: 0 auto 16px auto;
 }
 
 /* 数量限定表記 */
@@ -836,7 +785,17 @@ main {
 }
 
 .buy_title h3 {
-    margin: 8px 0 6px 0;
+    font-weight: bold;
+    font-size: 1.25rem;
+    /* 20px */
+    margin: 6px 0 4px 0;
+}
+
+.buy_set {
+    font-size: 0.875rem;
+    /* 14px */
+    margin-left: 16px;
+    letter-spacing: 1px;
 }
 
 .buy_item {
@@ -847,12 +806,12 @@ main {
 .buy_item img {
     display: block;
     width: 100%;
-    /* border-radius: 12px; */
-    border: 1px solid #35473950;
+    border-radius: 8px;
+    border: 1px solid #35473930;
 }
 
 .buy_select_btn {
-    padding: 24px 0;
+    padding: 12px 0;
 }
 
 .buy_select_btn li {
@@ -877,14 +836,14 @@ main {
     padding: 9px 24px 7px 24px;
     transition: .3s;
     cursor: pointer;
-    color: #fff;
-    background-color: #ad9578;
-    box-shadow: 2px 2px 2px #35473970;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #35473930;
 }
 
 .buy_select_item span p {
     margin-bottom: 3px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .buy_select_item span h3 {
@@ -894,32 +853,47 @@ main {
 }
 
 .buy_select_item:hover {
+    color: #fff;
     background: #CE8523;
 }
 
 input[type="radio"]:checked+.buy_select_item {
+    color: #fff;
     background-color: #b35317;
+}
+
+input[type="radio"]:checked+.buy_select_item .buy_stock {
+    color: #354739;
+    background-color: #fff;
 }
 
 .buy_stock {
     margin-top: 3px;
-    opacity: 0.8;
+    opacity: 0.85;
+    padding: 4px 4px 4px 7px;
+    border-radius: 4px;
+    background-color: #425E50;
+    color: #fff;
+    font-weight: bold;
 }
 
-.attention_msg {
+.attention_msg p {
     color: #b35317;
+    opacity: 0.8;
     font-size: 0.8125rem;
     /* 13px */
 }
 
 .buy_wrap .next_btn a {
-    margin: 32px auto 0 auto;
+    font-size: 1rem;
+    padding: 12px 24px;
+    margin: 20px auto 0 auto;
 }
 
 /* お問い合わせ */
 .contact form {
     padding: 40px 24px;
-    border-radius: 12px;
+    border-radius: 8px;
     margin: 0 auto;
     background-color: #FCF4E8;
 }
@@ -933,7 +907,7 @@ input[type="radio"]:checked+.buy_select_item {
     text-align: center;
     margin: 0 auto 36px auto;
     padding: 10px 16px 16px 16px;
-    border-radius: 24px;
+    border-radius: 8px;
     color: #fff;
     background-color: #715B47;
 }
@@ -976,14 +950,14 @@ input[type="radio"]:checked+.buy_select_item {
     font-size: 1rem;
     /* 16px */
     padding: 8px 16px;
-    /* border-radius: 12px; */
-    box-shadow: 2px 2px 2px #35473970;
+    border-radius: 4px;
+    border: 1px solid #35473930;
 }
 
 .form_item textarea {
     resize: vertical;
     /* 横方向のみリサイズなし */
-    height: 200px;
+    min-height: 200px;
 }
 
 .form_submit {
@@ -1002,6 +976,7 @@ input[type="submit"] {
     border: none;
     transition: .3s;
     color: #fff;
+    cursor: pointer;
     background-color: #425E50;
     box-shadow: 2px 2px 2px #35473970;
 }
@@ -1016,8 +991,8 @@ input[type="submit"]:hover {
     z-index: 10;
     bottom: 0;
     right: 0;
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     margin: 0 8px 8px 0;
     background-color: #425E50;
@@ -1040,16 +1015,16 @@ input[type="submit"]:hover {
 
 .buy_btn img {
     display: block;
-    width: 36px;
-    height: 36px;
-    margin: 10px auto 2px auto;
+    width: 30px;
+    height: 30px;
+    margin: 8px auto 2px auto;
 }
 
 .buy_btn p {
     color: #fff;
     text-align: center;
-    letter-spacing: 6px;
-    margin-left: 7px;
+    letter-spacing: 4px;
+    margin-left: 4px;
 }
 
 .buy_btn:hover {
@@ -1148,7 +1123,6 @@ input[type="submit"]:hover {
 
 .company_info p {
     display: block;
-    width: 300px;
     line-height: 1.3;
     margin: 0 auto;
 }
@@ -1188,7 +1162,7 @@ input[type="submit"]:hover {
 .site_map a {
     display: block;
     padding: 4px 12px;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: .3s;
 }
 
@@ -1218,13 +1192,13 @@ input[type="submit"]:hover {
 /* 準備中ページ */
 .creating_page {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
 }
 
 .creating_page h1 {
     display: block;
     text-align: center;
-    margin: 200px 0;
+    margin: 200px 0 120px 0;
     letter-spacing: 1px;
     line-height: 1.3;
 }
@@ -1268,7 +1242,6 @@ input[type="submit"]:hover {
 @media (max-width: 767px) and (min-width: 500px) {
 
     .buy_select_btn {
-        padding: 24px 0;
         display: flex;
         justify-content: space-between;
     }
@@ -1392,7 +1365,7 @@ input[type="submit"]:hover {
         position: relative;
         display: block;
         width: 100%;
-        border-radius: 12px;
+        border-radius: 8px;
         margin: 40px 0;
     }
 
@@ -1417,7 +1390,9 @@ input[type="submit"]:hover {
     }
 
     .buy_btn img {
-        margin: 12px auto 3px auto;
+        width: 36px;
+        height: 36px;
+        margin: 13px auto 2px auto;
     }
 
     /* こだわり */
@@ -1461,17 +1436,13 @@ input[type="submit"]:hover {
         width: 32.5%;
     }
 
-    .slick-prev {
-        left: -6%;
+    /* 矢印の設定 */
+    .prev_icon {
+        left: -4%;
     }
 
-    .slick-next {
-        right: -6%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        padding: 0 2.5px 10px 2.5px;
+    .next_icon {
+        right: -4%;
     }
 
     /* じゃがレシピ */
@@ -1491,7 +1462,7 @@ input[type="submit"]:hover {
     }
 
     .buy_title {
-        margin: 0 0 28px 0;
+        margin: 0 0 16px 0;
     }
 
     .buy_item {
@@ -1573,7 +1544,7 @@ input[type="submit"]:hover {
     }
 
     .company_info p {
-        margin: 0 auto 0 0;
+        margin: 0;
     }
 
     .site_map {
@@ -1656,7 +1627,7 @@ input[type="submit"]:hover {
     }
 
     .buy_title {
-        margin: 0 119px 28px 119px;
+        margin: 0 119px 16px 119px;
     }
 
     .buy_item img {
