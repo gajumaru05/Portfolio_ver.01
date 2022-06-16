@@ -93,8 +93,10 @@ $(function () {
         slidesToScroll: 1, //1回のスクロールで3枚の写真を移動して見せる
         pauseOnHover: false, //ホバーしたときにスライドを一時停止しない
         centerPadding: "0px", // 左右のスライドのpadding
-        swipeToSlide: true, //タッチスワイプを許可　→　許可すると正しくドットが表示されないのでコメントアウト
-        dots: false, //下部ドットナビゲーションの表示
+        swipeToSlide: true, //タッチスワイプを許可
+        dots: false, //下部ドットナビゲーションの非表示
+        prevArrow: '<img src="./img/item/left.svg" alt="" class="prev_icon">',
+        nextArrow: '<img src="./img/item/right.svg" alt="" class="next_icon">',
         responsive: [{
                 breakpoint: 1050, //モニターの横幅が1050px以下の見せ方
                 settings: {
